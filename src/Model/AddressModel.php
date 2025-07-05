@@ -1,6 +1,6 @@
 <?php
 
-namespace Vendor\ContaoAddressManager\Model;
+namespace JanKout\ContaoAddressManager\Model;
 
 use Contao\Model;
 

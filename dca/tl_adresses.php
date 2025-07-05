@@ -1,6 +1,6 @@
 <?php
 
-$GLOBALS['TL_DCA']['tl_address'] = [
+$GLOBALS['TL_DCA']['tl_addresses'] = [
     'config' => [
         'dataContainer' => 'Table',
         'sql' => ['keys' => ['id' => 'primary']]

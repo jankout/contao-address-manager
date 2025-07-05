@@ -1,6 +1,6 @@
 <?php
 
-$GLOBALS['BE_MOD']['content']['address'] = [
-    'tables' => ['tl_address'],
+$GLOBALS['BE_MOD']['content']['addresses'] = [
+    'tables' => ['tl_addresses'],
     'icon' => 'assets/icon.svg',
 ];
