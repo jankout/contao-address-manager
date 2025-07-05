@@ -2,7 +2,7 @@
 
 // Feld hinzufügen
 $GLOBALS['TL_DCA']['tl_news']['fields']['address'] = [
-    'label' => ['Adresse', 'Verknüpfte Adresse wählen'],
+    'label' => &$GLOBALS['TL_LANG']['tl_news']['fields']['address'],
     'inputType' => 'select',
     'foreignKey' => 'tl_addresses.title',
     'eval' => ['chosen' => true, 'includeBlankOption' => true],
