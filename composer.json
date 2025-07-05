@@ -9,8 +9,5 @@
     "psr-4": {
       "JanKout\\ContaoAddressManager\\": "src/"
     }
-  },
-  "extra": {
-    "contao-manager-plugin": "jankout\\ContaoAddressManager\\ContaoManager\\Plugin"
   }
 }
