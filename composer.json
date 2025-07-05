@@ -1,6 +1,6 @@
 {
   "name": "jankout/contao-address-manager",
-  "type": "contao-module",
+  "type": "contao-bundle",
   "require": {
     "php": "^8.1",
     "contao/core-bundle": "^4.13 || ^5.0"
@@ -9,5 +9,8 @@
     "psr-4": {
       "JanKout\\ContaoAddressManager\\": "src/"
     }
+  },
+  "extra": {
+    "contao-manager-plugin": "JanKout\\ContaoAddressManager\\ContaoManager\\Plugin"
   }
 }
