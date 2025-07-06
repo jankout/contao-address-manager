@@ -1,5 +1,13 @@
 {
   "name": "jankout/contao-address-manager",
+  "description": "Address manager for Contao CMS",
+  "keywords": [
+    "contao",
+    "address",
+    "manager",
+    "news",
+    "events"
+  ],
   "type": "contao-bundle",
   "require": {
     "php": "^8.2",
