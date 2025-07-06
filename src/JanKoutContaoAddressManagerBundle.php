@@ -4,10 +4,4 @@ namespace JanKout\ContaoAddressManager;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
-class JanKoutContaoAddressManagerBundle extends Bundle
-{
-    public function getPath(): string
-    {
-        return \dirname(__DIR__);
-    }
-}
+class JanKoutContaoAddressManagerBundle extends Bundle {}
