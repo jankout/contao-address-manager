@@ -5,6 +5,16 @@
     "php": "^8.2",
     "contao/core-bundle": "^5.0"
   },
+  "license": [
+    "MIT"
+  ],
+  "authors": [
+    {
+      "name": "Jan Kout",
+      "email": "jankout.eu",
+      "role": "Developer"
+    }
+  ],
   "autoload": {
     "psr-4": {
       "JanKout\\ContaoAddressManager\\": "src/"
