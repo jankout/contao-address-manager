@@ -11,8 +11,8 @@ class Plugin implements BundlePluginInterface
     public function getBundles(ParserInterface $parser)
     {
         return [
-            BundleConfig::create(\JanKout\ContaoAddressManager\JanKoutContaoAddressManagerBundle::class)
-                ->setLoadAfter([ContaoCoreBundle::class]),
+            BundleConfig::create('JanKout\ContaoAddressManager\ContaoAddressManagerBundle')
+                ->setLoadAfter(['Contao\CoreBundle\ContaoCoreBundle']),
         ];
     }
 }
