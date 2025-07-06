@@ -4,7 +4,7 @@
  * Addresses bundle for Contao Open Source CMS.
  *
  * @copyright  Copyright (c) 2025, Jan Kout
- * @author     Codefog <https://jankout.eu>
+ * @author     Jan Kout <https://jankout.eu>
  * @license    MIT
  */
 
