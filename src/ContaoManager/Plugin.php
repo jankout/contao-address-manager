@@ -8,7 +8,7 @@ use Contao\ManagerPlugin\Bundle\BundlePluginInterface;
 
 class Plugin implements BundlePluginInterface
 {
-    public function getBundles(ParserInterface $parser)
+    public function getBundles(ParserInterface $parser): array
     {
         return [
             BundleConfig::create('JanKout\ContaoAddressManager\ContaoAddressManagerBundle')
