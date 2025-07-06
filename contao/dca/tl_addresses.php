@@ -37,19 +37,24 @@ $GLOBALS['TL_DCA']['tl_addresses'] = [
             'fields' => ['title', 'city'],
             'format' => '%s (%s)'
         ],
-        'global_operations' => [
-            'toggleNodes' => [
-                'label' => &$GLOBALS['TL_LANG']['MSC']['toggleAll'],
-                'href' => 'ptg=all',
-                'class' => 'header_toggle',
-            ],
-            'all' => [
-                'label' => &$GLOBALS['TL_LANG']['MSC']['all'],
-                'href' => 'act=select',
-                'class' => 'header_edit_all',
-                'attributes' => 'onclick="Backend.getScrollOffset()" accesskey="e"',
-            ],
-        ],
+        'operations' => array(
+            'edit',
+            'copy',
+            'cut',
+            'delete',
+            'toggle' => array(
+                'href' => 'act=toggle&amp;field=published',
+                'icon' => 'visible.svg',
+                'primary' => true,
+                'showInHeader' => true
+            ),
+            'feature' => array(
+                'href' => 'act=toggle&amp;field=featured',
+                'icon' => 'featured.svg',
+                'primary' => true,
+            ),
+            'show'
+        ),
     ],
     'palettes' => [
         'default' => 'title,street,postal,city,country,published',
