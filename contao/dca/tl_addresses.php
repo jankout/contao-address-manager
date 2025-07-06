@@ -21,8 +21,14 @@ $GLOBALS['TL_DCA']['tl_addresses'] = [
         'sql' => [
             'keys' => [
                 'id' => 'primary',
-                'pid' => 'index',
                 'alias' => 'index',
+            ],
+        ],
+        'permissions' => [
+            'tl_addresses' => [
+                'create' => ['custom', 'group'],
+                'edit' => ['custom', 'group'],
+                'delete' => ['custom', 'group'],
             ],
         ],
     ],
@@ -62,13 +68,20 @@ $GLOBALS['TL_DCA']['tl_addresses'] = [
     'fields' => [
         'id' => ['sql' => 'int(10) unsigned NOT NULL auto_increment'],
         'tstamp' => ['sql' => "int(10) unsigned NOT NULL default '0'"],
-        'pid' => [
-            'sql' => ['type' => 'integer', 'unsigned' => true, 'default' => 0],
-        ],
         'sorting' => [
             'sql' => ['type' => 'integer', 'unsigned' => true, 'default' => 0],
         ],
         'title' => ['label' => &$GLOBALS['TL_LANG']['tl_addresses']['title'], 'inputType' => 'text', 'eval' => ['mandatory' => true, 'maxlength' => 255], 'sql' => "varchar(255) NOT NULL default ''"],
+        'alias' => [
+            'exclude' => true,
+            'search' => true,
+            'inputType' => 'text',
+            'eval' => ['rgxp' => 'alias', 'unique' => true, 'maxlength' => 128, 'tl_class' => 'w50'],
+            'save_callback' => [
+                ['tl_addresses', 'generateAlias']
+            ],
+            'sql' => "varchar(128) BINARY NOT NULL default ''"
+        ],
         'street' => ['label' => &$GLOBALS['TL_LANG']['tl_addresses']['street'], 'inputType' => 'text', 'eval' => ['maxlength' => 255], 'sql' => "varchar(255) NOT NULL default ''"],
         'postal' => ['label' => &$GLOBALS['TL_LANG']['tl_addresses']['postal'], 'inputType' => 'text', 'eval' => ['maxlength' => 32], 'sql' => "varchar(32) NOT NULL default ''"],
         'city' => ['label' => &$GLOBALS['TL_LANG']['tl_addresses']['city'], 'inputType' => 'text', 'eval' => ['maxlength' => 255], 'sql' => "varchar(255) NOT NULL default ''"],
